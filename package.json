@@ -1,0 +1,20 @@
+{
+  "name": "storybook-babel-typescript-shim",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "jason@jasons.io <jason@jasons.io>",
+  "license": "MIT",
+  "types": "./index.d.ts",
+  "peerDependencies": {
+    "@babel/core": "^7.0.0-0",
+    "@babel/register": "^7.0.0-0",
+    "@storybook/react": "^3.0.0",
+    "@types/webpack": "^3.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-0",
+    "@babel/register": "^7.0.0-0",
+    "@storybook/react": "^3.0.0",
+    "@types/webpack": "^3.0.0"
+  }
+}
