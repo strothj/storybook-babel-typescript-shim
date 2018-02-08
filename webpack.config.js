@@ -15,11 +15,11 @@ try {
   );
 }
 
-const addWebpackTypeScriptShim = (baseConfig, env) => {
+const addWebpackTypeScriptShim = (baseConfig, env, defaultConfig) => {
   let createWebpackConfig = require(configPaths["webpack.config"]);
   createWebpackConfig = createWebpackConfig.default || createWebpackConfig;
 
-  const config = createWebpackConfig(baseConfig, env);
+  const config = createWebpackConfig(baseConfig, env, defaultConfig);
 
   // Replace Webpack entries that point to this package's stubs with those in
   // the user's .storybook directory.

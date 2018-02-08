@@ -1,3 +1,7 @@
-const genDefaultConfig = require("@storybook/react/dist/server/config/defaults/webpack.config.js");
+module.exports = (baseConfig, env, defaultConfig) => {
+  // Use provided default config if available (Storybook 3.4+)
+  if (typeof defaultConfig !== "undefined") return defaultConfig;
 
-module.exports = (baseConfig, env) => genDefaultConfig(baseConfig, env);
+  const genDefaultConfig = require("@storybook/react/dist/server/config/defaults/webpack.config.js");
+  return genDefaultConfig(baseConfig, env);
+};
